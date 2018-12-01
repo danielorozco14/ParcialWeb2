@@ -76,3 +76,30 @@ router.delete('/:id',function(req,res){
         });
     }
 });
+router.put('/:id',function(req,res){
+    if(req.params.id){
+        movilesModelo.findByIdAndUpdate(req.params.id,{
+            nombre:req.body.nombre,
+            publicador: req.body.publicador,
+            fechaPublicacion: req.body.fechaPublicacion
+        },function(err,actualizado){
+            if(err){
+                res.json({
+                    status:500,
+                    success:false,
+                    errs
+
+                });
+            }
+            else{
+                res.json({
+                    status:200,
+                    success:true,
+                    actualizado
+                })
+            }
+        });
+    }
+});
+
+module.exports=router;
