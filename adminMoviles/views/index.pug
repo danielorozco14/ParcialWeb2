@@ -1,5 +1,25 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div(class="jumbotron" style="background-color: beige; padding:20px; margin:0;")
+    h1.text-center.mx-auto.display-4 Administrador de Aplicaciones
+  div( class="jumbotron" style="background-color: grey;")
+    form.mx-auto(action="/movil" method="POST" name="guardarMovil")
+      div.form-row
+        div.col-3
+          input#nombre(type="text" name="nombre" class="form-control" placeholder="Nombre" required)
+        div.col-3
+          input#publicador(type="text" name="publicador" class="form-control" placeholder="Nombre Publicador" required)
+        div.col-3
+          input#fechaPublicacion(type="date" name="fechaPublicacion" class="form-control" required)
+        div.col-auto
+          button(type="submit" class="btn btn-primary mb-2") Guardar
+  table(class="table")
+    thead(class="thead-dark")
+      th(scope="col") #
+      th(scope="col") Nombre
+      th(scope="col") Nombre del Publicador
+      th(scope="col") Fecha de Publicacion
+      th(scope="col") Opciones
+    tbody(class="tablaMoviles")
+  script(src="/javascripts/main.js")

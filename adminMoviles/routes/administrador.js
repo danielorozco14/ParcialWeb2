@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var movilesModelo = require('../models/Moviles');
+var debug= require('debug')('adminmoviles:server');
 
 router.get('/', function (req, res) {
     debug('Obteniendo todos las aplicaciones');

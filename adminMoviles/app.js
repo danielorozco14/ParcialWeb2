@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose= require('mongoose');
 //MODELOS
-var Administrador= requiere('./models/Moviles');
+var Administrador= require('./models/Moviles');
 //ROUTERS
 var administradorRouter= require('./routes/administrador');
 var indexRouter = require('./routes/index');

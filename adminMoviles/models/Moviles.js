@@ -12,7 +12,7 @@ let Moviles= new mongoose.Schema({
         unique:false
     },
     fechaPublicacion:{
-        type:Date,
+        type:String,
         required:true,
         unique:false
     },

@@ -20,7 +20,7 @@ let app={
                     <td class="opciones">
                         <a data-id="${element._id}" class= "edit" href="">Editar</a>
                         <a data-id="${element._id}" class= "delete" href="">Eliminar</a>
-                     </td>
+                    </td>
                 </tr>                
                 `              
             contadorFilas++;
@@ -88,7 +88,7 @@ formulario.addEventListener('submit',function(event){
                 loadContent();
             }
         });
-        loadContent();
+        //loadContent();
     }
     
 });
