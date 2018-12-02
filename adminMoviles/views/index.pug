@@ -4,7 +4,7 @@ block content
   div(class="jumbotron" style="background-color: beige; padding:20px; margin:0;")
     h1.text-center.mx-auto.display-4 Administrador de Aplicaciones
   div( class="jumbotron" style="background-color: grey;")
-    form.mx-auto(action="/movil" method="POST" name="guardarMovil")
+    form.mx-auto#new(action="/movil" method="POST" name="guardarMovil")
       div.form-row
         div.col-3
           input#nombre(type="text" name="nombre" class="form-control" placeholder="Nombre" required)
@@ -21,5 +21,5 @@ block content
       th(scope="col") Nombre del Publicador
       th(scope="col") Fecha de Publicacion
       th(scope="col") Opciones
-    tbody(class="tablaMoviles")
+    tbody.tablaMoviles
   script(src="/javascripts/main.js")

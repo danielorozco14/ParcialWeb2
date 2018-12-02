@@ -78,8 +78,7 @@ formulario.addEventListener('submit',function(event){
         fetch(formulario.action,{
             method:'PUT',
             body: new URLSearchParams(new FormData(formulario))
-        }).then (res=>res.json())
-        .then(data=>{
+        }).then (res=>res.json()).then(data=>{
             if(data.success){
                 formulario.action='/movil';
                 formulario.method='POST';
@@ -88,8 +87,8 @@ formulario.addEventListener('submit',function(event){
                 loadContent();
             }
         });
-        //loadContent();
+        loadContent();
     }
-    
+   
 });
 window.onload=()=>app.init();
